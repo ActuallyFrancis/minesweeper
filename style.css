@@ -20,11 +20,19 @@ button {
 }
 
 h1 {
+    padding: 10%;
     font-size: 50px;
     text-align: center;
     font-family: 'Roboto Mono', monospace;
 
 
+}
+
+.button h1 {
+    padding: 100px;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .grid {
@@ -80,7 +88,7 @@ h1 {
 }
 
 
-div {
+.flag {
     font-size: 25px;
     text-align: center;
     font-family: 'Roboto Mono', monospace;
@@ -90,7 +98,10 @@ div {
 
 
 #result {
-    margin-top: 5px;
+
+    font-size: 60px;
+    padding: 10px;
+    text-align: center;
     color: #fa0000;
 }
 
@@ -105,30 +116,21 @@ div {
 /* Button */
 
 .main__btn {
-    font-size: 1.8rem;
-    padding: 20px 60px;
+
+    font-size: 2rem;
+    padding: 0px 0px;
     border: none;
     border-radius: 4px;
-    margin-top: 2rem;
-
+    margin-top: 0rem;
     position: relative;
 
 }
 
 .main__btn a {
-    position: relative;
-    z-index: 2;
-    color: #fff;
-    text-decoration: none;
-}
-
-a {
     height: 30px;
     width: 130px;
     display: inline-block;
     position: absolute;
-    top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%);
     color: #23252f;
     text-decoration: none;
@@ -137,7 +139,7 @@ a {
     background: #64ed85;
     box-shadow: 3px 3px 6px #296137, -3px -3px 6px #9fffd3;
     transition: all .3s;
-    /* shine effect */
+    /* gradient shine hover effect */
     background-repeat: no-repeat;
     background-position: -300px -135px, 0 0;
     background-image: -webkit-linear-gradient(top left, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 37%, rgba(255, 255, 255, 0.8) 45%, rgba(255, 255, 255, 0.0) 50%);
@@ -145,15 +147,26 @@ a {
     transition: background-position 0s ease;
 }
 
-a:active {
+/* click animation */
+.main__btn a:active {
     border-radius: 25px;
     border-radius: 9px;
     background: #64ed85;
     box-shadow: inset 3px 3px 6px #296137, inset -3px -3px 6px #9fffd3;
 }
 
-a:hover {
+/* hover animation */
+.main__btn a:hover {
     transform: translate(-50%, -50%) scale(1.03);
     background-position: 0 0, 0 0;
     transition-duration: 0.9s;
+}
+
+
+.grid div:hover {
+    cursor: pointer;
+    background-color: rgb(173, 67, 67);
+    background-position: 0 0, 0 0;
+    transition-duration: 0.9s;
+
 }
